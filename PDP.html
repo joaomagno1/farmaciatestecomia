@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analgésico X 500mg - 20 Comprimidos - Drogaria Central</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Mesmo cinza claro do corpo */
+        }
+        .brand-red { color: #b91c1c; }
+        .bg-brand-red { background-color: #b91c1c; }
+        .hover-bg-brand-red-dark:hover { background-color: #991b1b; }
+        .border-brand-red { border-color: #b91c1c; }
+        .ring-brand-red:focus { ring-color: #b91c1c; } /* Para inputs e focus */
+        .outline-brand-red:focus { outline-color: #b91c1c; }
+
+        /* Efeito de zoom placeholder na imagem principal */
+        .main-product-image-container {
+            position: relative;
+            overflow: hidden; /* Esconde partes da imagem que saem do container no zoom */
+        }
+        .main-product-image {
+            transition: transform 0.3s ease;
+        }
+        .main-product-image-container:hover .main-product-image {
+            transform: scale(1.2); /* Efeito de zoom simples */
+        }
+
+        .thumbnail-image {
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+        }
+        .thumbnail-image.active,
+        .thumbnail-image:hover {
+            border-color: #b91c1c;
+        }
+        /* Estilo para a cruz moderna no header (igual ao da homepage) */
+        .header-cross {
+            width: 28px; height: 28px; position: relative; color: #b91c1c;
+        }
+        .header-cross::before, .header-cross::after {
+            content: ''; position: absolute; background-color: currentColor; border-radius: 3px;
+        }
+        .header-cross::before { width: 7px; height: 100%; left: 50%; transform: translateX(-50%); }
+        .header-cross::after { width: 100%; height: 7px; top: 50%; transform: translateY(-50%); }
+
+        /* Abas de informação */
+        .tab-button.active {
+            border-color: #b91c1c;
+            color: #b91c1c;
+            font-weight: 600;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="header-cross"></div>
+                    <span class="text-2xl font-extrabold brand-red">Drogaria Central</span>
+                </a>
+                <div class="hidden md:flex flex-1 max-w-xl mx-4">
+                    <input type="search" placeholder="O que você procura?" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:ring-2 ring-brand-red focus:border-transparent outline-none transition-shadow">
+                    <button class="bg-brand-red hover-bg-brand-red-dark text-white px-4 py-2 rounded-r-md">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:brand-red transition-colors flex items-center space-x-1">
+                        <i class="fas fa-user text-xl"></i><span class="hidden lg:inline">Entrar</span>
+                    </a>
+                    <a href="cart.html" class="text-gray-600 hover:brand-red transition-colors flex items-center space-x-1 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i><span class="hidden lg:inline">Carrinho</span>
+                        <span class="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="mt-3 hidden md:block">
+                <ul class="flex space-x-6 justify-center">
+                    <li><a href="plp.html" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Medicamentos</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Beleza</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Higiene</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Mamãe e Bebê</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Vitaminas</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Ofertas</a></li>
+                </ul>
+            </nav>
+             <div class="mt-3 md:hidden">
+                <input type="search" placeholder="O que você procura?" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 ring-brand-red focus:border-transparent outline-none transition-shadow">
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <nav class="text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex space-x-2">
+                <li class="flex items-center"><a href="index.html" class="hover:brand-red">Início</a></li>
+                <li class="flex items-center"><i class="fas fa-chevron-right text-xs mx-2"></i><a href="plp.html" class="hover:brand-red">Medicamentos</a></li>
+                <li class="flex items-center"><i class="fas fa-chevron-right text-xs mx-2"></i><a href="plp.html" class="hover:brand-red">Dor e Febre</a></li>
+                <li class="flex items-center"><i class="fas fa-chevron-right text-xs mx-2"></i><span class="font-medium text-gray-800">Analgésico X 500mg - 20 Comprimidos</span></li>
+            </ol>
+        </nav>
+
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="main-product-image-container mb-4 border rounded-lg">
+                        <img id="mainImage" src="https://via.placeholder.com/600x600/E9967A/FFFFFF?text=Analg%C3%A9sico+X" alt="Analgésico X - Imagem Principal" class="w-full h-auto object-cover rounded-lg main-product-image">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <img src="https://via.placeholder.com/150x150/E9967A/FFFFFF?text=Analg%C3%A9sico+X+1" alt="Analgésico X - Miniatura 1" class="thumbnail-image active w-full h-auto object-cover rounded" onclick="changeImage('https://via.placeholder.com/600x600/E9967A/FFFFFF?text=Analg%C3%A9sico+X+1', this)">
+                        <img src="https://via.placeholder.com/150x150/E9967A/FFFFFF?text=Embalagem" alt="Analgésico X - Miniatura 2" class="thumbnail-image w-full h-auto object-cover rounded" onclick="changeImage('https://via.placeholder.com/600x600/E9967A/FFFFFF?text=Embalagem', this)">
+                        <img src="https://via.placeholder.com/150x150/E9967A/FFFFFF?text=Detalhe" alt="Analgésico X - Miniatura 3" class="thumbnail-image w-full h-auto object-cover rounded" onclick="changeImage('https://via.placeholder.com/600x600/E9967A/FFFFFF?text=Detalhe', this)">
+                        <img src="https://via.placeholder.com/150x150/E9967A/FFFFFF?text=Bula" alt="Analgésico X - Miniatura 4" class="thumbnail-image w-full h-auto object-cover rounded" onclick="changeImage('https://via.placeholder.com/600x600/E9967A/FFFFFF?text=Bula', this)">
+                    </div>
+                </div>
+
+                <div class="space-y-5">
+                    <h1 class="text-3xl font-bold text-gray-800">Analgésico X 500mg - 20 Comprimidos</h1>
+                    <p class="text-sm text-gray-500">Marca: <span class="font-medium text-gray-700">Marca Exemplo</span> | Código: <span class="font-medium text-gray-700">DC12345</span></p>
+                    
+                    <div class="flex items-center space-x-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <a href="#reviews" class="text-sm text-gray-600 hover:brand-red">(123 Avaliações)</a>
+                    </div>
+
+                    <div>
+                        <p class="text-sm text-gray-500 line-through">De: R$ 15,00</p>
+                        <p class="text-4xl font-extrabold brand-red">R$ 12,50</p>
+                        <p class="text-sm text-green-600">Economize R$ 2,50 (16% OFF)</p>
+                        <p class="text-sm text-gray-600 mt-1">ou em até <span class="font-semibold">3x de R$ 4,17</span> sem juros</p>
+                    </div>
+
+                    <p class="text-green-600 font-semibold"><i class="fas fa-check-circle mr-1"></i> Em estoque</p>
+                    
+                    <div class="flex items-center space-x-3">
+                        <label for="quantity" class="text-sm font-medium text-gray-700">Quantidade:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" class="w-16 p-2 border border-gray-300 rounded-md text-center focus:ring-2 ring-brand-red focus:border-transparent outline-none">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-3">
+                        <button class="w-full sm:w-auto flex-1 bg-brand-red hover-bg-brand-red-dark text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors flex items-center justify-center">
+                            <i class="fas fa-cart-plus mr-2"></i>Adicionar ao Carrinho
+                        </button>
+                        <button class="w-full sm:w-auto border-2 border-brand-red brand-red hover:bg-brand-red hover:text-white font-bold py-3 px-6 rounded-lg text-lg transition-colors flex items-center justify-center">
+                            <i class="fas fa-bolt mr-2"></i>Comprar Agora
+                        </button>
+                        <button aria-label="Adicionar à lista de desejos" class="text-gray-500 hover:brand-red p-3 rounded-full hover:bg-red-50 transition-colors">
+                            <i class="far fa-heart text-2xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="border-t border-b py-4 space-y-2">
+                        <p class="text-sm font-medium text-gray-700">Calcular frete e prazo:</p>
+                        <div class="flex">
+                            <input type="text" placeholder="Digite seu CEP" class="w-full sm:w-auto flex-grow p-2 border border-gray-300 rounded-l-md focus:ring-2 ring-brand-red focus:border-transparent outline-none">
+                            <button class="bg-gray-700 hover:bg-gray-800 text-white font-semibold p-2 px-4 rounded-r-md">Calcular</button>
+                        </div>
+                         <a href="#" class="text-xs text-gray-500 hover:brand-red">Não sei meu CEP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <div class="border-b border-gray-200 mb-6">
+                <nav class="-mb-px flex space-x-6" aria-label="Tabs">
+                    <button class="tab-button active py-3 px-1 border-b-2 font-medium text-sm border-transparent hover:border-gray-300 focus:outline-none" data-tab="description">
+                        Descrição
+                    </button>
+                    <button class="tab-button py-3 px-1 border-b-2 font-medium text-sm border-transparent hover:border-gray-300 focus:outline-none" data-tab="specs">
+                        Informações Técnicas / Bula
+                    </button>
+                    <button class="tab-button py-3 px-1 border-b-2 font-medium text-sm border-transparent hover:border-gray-300 focus:outline-none" data-tab="reviews">
+                        Avaliações (<span id="reviewCount">123</span>)
+                    </button>
+                </nav>
+            </div>
+
+            <div>
+                <div id="descriptionContent" class="tab-content active prose max-w-none">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Descrição Completa do Produto</h3>
+                    <p>Analgésico X é indicado para o alívio temporário de dores de intensidade leve a moderada, como dores de cabeça, dores musculares, dores de dente, e para reduzir a febre.</p>
+                    <p>Sua fórmula contém 500mg de paracetamol por comprimido, um ativo conhecido por sua eficácia e segurança quando utilizado conforme as indicações.</p>
+                    <ul class="list-disc list-inside space-y-1 mt-2">
+                        <li>Alívio rápido da dor e febre.</li>
+                        <li>Fácil de administrar.</li>
+                        <li>Contém 20 comprimidos.</li>
+                    </ul>
+                    <p class="mt-2 font-semibold">Modo de usar:</p>
+                    <p>Adultos e crianças acima de 12 anos: 1 a 2 comprimidos, 3 a 4 vezes ao dia. Não exceder 8 comprimidos em 24 horas. Leia a bula.</p>
+                    <p class="mt-3 text-sm text-red-600 font-medium">SE PERSISTIREM OS SINTOMAS, O MÉDICO DEVERÁ SER CONSULTADO. ANALGÉSICO X É UM MEDICAMENTO. SEU USO PODE TRAZER RISCOS. PROCURE O MÉDICO E O FARMACÊUTICO. LEIA A BULA.</p>
+                </div>
+
+                <div id="specsContent" class="tab-content prose max-w-none">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Informações Técnicas / Bula</h3>
+                    <p class="font-semibold">Princípio Ativo:</p>
+                    <p>Paracetamol 500mg</p>
+                    <p class="font-semibold mt-2">Excipientes:</p>
+                    <p>Amido, povidona, ácido esteárico, etc.</p>
+                    <p class="font-semibold mt-2">Indicações:</p>
+                    <p>Alívio de dores e febre.</p>
+                    <p class="font-semibold mt-2">Contraindicações:</p>
+                    <p>Alergia ao paracetamol ou a qualquer componente da fórmula. Doença grave do fígado.</p>
+                    <p class="mt-3 text-sm text-red-600 font-medium">ESTE PRODUTO É UM MEDICAMENTO. SEU USO PODE TRAZER RISCOS. PROCURE O MÉDICO E O FARMACÊUTICO. LEIA A BULA COMPLETA ANTES DE USAR.</p>
+                    <a href="#" class="text-red-600 hover:text-red-800 underline mt-2 inline-block">Clique aqui para ver a bula completa em PDF</a>
+                </div>
+
+                <div id="reviewsContent" class="tab-content">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Avaliações dos Clientes</h3>
+                    {/* */}
+                    <div class="space-y-6">
+                        <div class="border-b pb-4">
+                            <div class="flex items-center mb-1">
+                                <div class="flex text-yellow-400 mr-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                                <h4 class="font-semibold text-gray-700">Muito bom!</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-1">Por João Silva em <time datetime="2025-05-15">15 de Maio de 2025</time></p>
+                            <p class="text-gray-600">Realmente alivia a dor de cabeça rapidamente. Recomendo!</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <div class="flex items-center mb-1">
+                                <div class="flex text-yellow-400 mr-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h4 class="font-semibold text-gray-700">Excelente produto</h4>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-1">Por Maria Oliveira em <time datetime="2025-05-10">10 de Maio de 2025</time></p>
+                            <p class="text-gray-600">Cumpre o que promete, sempre tenho em casa.</p>
+                        </div>
+                    </div>
+                    {/* */}
+                    <div class="mt-8 pt-6 border-t">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Deixe sua avaliação</h4>
+                        {/* */}
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Sua nota:</label>
+                                <div class="flex space-x-1 text-2xl text-gray-300">
+                                    <i class="far fa-star cursor-pointer hover:text-yellow-400"></i>
+                                    <i class="far fa-star cursor-pointer hover:text-yellow-400"></i>
+                                    <i class="far fa-star cursor-pointer hover:text-yellow-400"></i>
+                                    <i class="far fa-star cursor-pointer hover:text-yellow-400"></i>
+                                    <i class="far fa-star cursor-pointer hover:text-yellow-400"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="reviewTitle" class="block text-sm font-medium text-gray-700">Título da avaliação:</label>
+                                <input type="text" id="reviewTitle" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 ring-brand-red focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="reviewComment" class="block text-sm font-medium text-gray-700">Seu comentário:</label>
+                                <textarea id="reviewComment" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 ring-brand-red focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md">Enviar Avaliação</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Quem viu, comprou também</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200/A7D8DE/FFFFFF?text=Antit%C3%A9rmico+Y" alt="Antitérmico Y" class="w-full h-40 object-cover">
+                    </a>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-1 h-10 overflow-hidden"><a href="#" class="hover:brand-red">Antitérmico Y Gotas 20ml Pediátrico</a></h3>
+                        <p class="text-xs text-gray-500 mb-2">Marca Famosa</p>
+                        <div class="mt-auto">
+                            <p class="text-lg font-bold brand-red">R$ 22,80</p>
+                            <button class="mt-2 w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-1.5 px-3 text-xs rounded-md transition-colors"><i class="fas fa-cart-plus mr-1"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                {/* */}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200/F0E68C/333333?text=Anti-Inflamat%C3%B3rio+Z" alt="Anti-inflamatório Z" class="w-full h-40 object-cover">
+                    </a>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-1 h-10 overflow-hidden"><a href="#" class="hover:brand-red">Anti-inflamatório Z Gel 30g</a></h3>
+                        <p class="text-xs text-gray-500 mb-2">Genérico Pharma</p>
+                        <div class="mt-auto">
+                            <p class="text-lg font-bold brand-red">R$ 18,90</p>
+                            <button class="mt-2 w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-1.5 px-3 text-xs rounded-md transition-colors"><i class="fas fa-cart-plus mr-1"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200/98FB98/333333?text=Vitamina+C" alt="Vitamina C" class="w-full h-40 object-cover">
+                    </a>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-1 h-10 overflow-hidden"><a href="#" class="hover:brand-red">Vitamina C Efervescente Laranja</a></h3>
+                        <p class="text-xs text-gray-500 mb-2">NutriVida</p>
+                        <div class="mt-auto">
+                            <p class="text-lg font-bold brand-red">R$ 25,00</p>
+                            <button class="mt-2 w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-1.5 px-3 text-xs rounded-md transition-colors"><i class="fas fa-cart-plus mr-1"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/300x200/ADD8E6/FFFFFF?text=Term%C3%B4metro" alt="Termômetro Digital" class="w-full h-40 object-cover">
+                    </a>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-sm font-semibold text-gray-800 mb-1 h-10 overflow-hidden"><a href="#" class="hover:brand-red">Termômetro Digital Clínico Precisão</a></h3>
+                        <p class="text-xs text-gray-500 mb-2">MedEquip</p>
+                        <div class="mt-auto">
+                            <p class="text-lg font-bold brand-red">R$ 35,90</p>
+                            <button class="mt-2 w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-1.5 px-3 text-xs rounded-md transition-colors"><i class="fas fa-cart-plus mr-1"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Drogaria Central</h4>
+                     <div class="flex items-center space-x-2 mb-2">
+                        <div class="header-cross !text-white !w-6 !h-6">
+                           <style scoped> .footer-logo .header-cross::before { width: 5px; } .footer-logo .header-cross::after { height: 5px; } </style>
+                        </div>
+                        <span class="text-xl font-bold text-white">Drogaria Central</span>
+                    </div>
+                    <p class="text-sm">Sua saúde, nosso foco. Desde [Ano de Fundação], oferecendo cuidado e confiança.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Nossas Lojas</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Atendimento</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Central de Ajuda</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Políticas de Privacidade</a></li>
+                        <li><a href="mailto:contato@drogariacentral.com.br" class="hover:text-red-400 transition-colors">contato@drogariacentral.com.br</a></li>
+                        <li><span class="font-semibold">(XX) XXXX-XXXX</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Siga-nos</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> Drogaria Central. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript para galeria de imagens
+        function changeImage(newImageSrc, clickedThumbnail) {
+            document.getElementById('mainImage').src = newImageSrc;
+            // Atualiza a classe 'active' das miniaturas
+            const thumbnails = document.querySelectorAll('.thumbnail-image');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            clickedThumbnail.classList.add('active');
+        }
+
+        // JavaScript para Abas de Informação
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove 'active' de todos os botões e conteúdos
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Adiciona 'active' ao botão clicado e ao conteúdo correspondente
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab + 'Content').classList.add('active');
+            });
+        });
+
+        // Outras lógicas JS:
+        // - Validação do CEP e cálculo de frete (requer API externa ou lógica de back-end)
+        // - Adicionar ao carrinho (atualizar contador no header, armazenar no localStorage/sessão ou enviar para back-end)
+        // - Lógica para seletor de quantidade
+        // - Envio de avaliação (requer back-end)
+        // - Funcionalidade de "Comprar Agora"
+        // - Lista de Desejos
+        console.log("Página de Detalhes do Produto carregada. JS para galeria e abas implementado. Outras interatividades a serem desenvolvidas.");
+    </script>
+
+</body>
+</html>
