@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Central - Sua saúde, nosso foco.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="header-cross" aria-label="Logótipo da Farmácia"></div>
+                    <span class="text-2xl font-extrabold brand-red">Drogaria Central</span>
+                </a>
+
+                <div class="hidden md:flex flex-1 max-w-xl mx-4">
+                    <input type="search" placeholder="O que você procura?" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-shadow">
+                    <button class="bg-brand-red hover-bg-brand-red-dark text-white px-4 py-2 rounded-r-md">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:brand-red transition-colors flex items-center space-x-1">
+                        <i class="fas fa-user text-xl"></i>
+                        <span class="hidden lg:inline">Entrar</span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:brand-red transition-colors flex items-center space-x-1 relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="hidden lg:inline">Carrinho</span>
+                        <span class="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="mt-3 hidden md:block">
+                <ul class="flex space-x-6 justify-center">
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Medicamentos</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Beleza</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Higiene</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Mamãe e Bebê</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Vitaminas</a></li>
+                    <li><a href="#" class="text-gray-700 hover:brand-red font-medium pb-1 border-b-2 border-transparent hover:border-brand-red transition-colors">Ofertas</a></li>
+                </ul>
+            </nav>
+             <div class="mt-3 md:hidden">
+                <input type="search" placeholder="O que você procura?" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-shadow">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner py-16 md:py-24 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Bem-vindo à Drogaria Central!</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Cuidando da sua saúde com a atenção e a confiança que você merece. As melhores ofertas e serviços perto de você.</p>
+            <a href="#" class="bg-white text-red-600 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-red-50 transition-transform transform hover:scale-105">Ver Ofertas</a>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Navegue por Categorias</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-pills text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Medicamentos</h3>
+                </a>
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-spa text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Beleza</h3>
+                </a>
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-pump-soap text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Higiene Pessoal</h3>
+                </a>
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-baby-carriage text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Mamãe e Bebê</h3>
+                </a>
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-capsules text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Vitaminas</h3>
+                </a>
+                <a href="#" class="category-card bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300">
+                    <i class="fas fa-tags text-4xl brand-red mb-3"></i>
+                    <h3 class="text-lg font-semibold text-gray-700">Ofertas</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Ofertas Imperdíveis</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8">
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 flex flex-col">
+                    <img src="https://via.placeholder.com/300x200/cccccc/969696.png?text=Produto+Exemplo" alt="Nome do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Nome do Produto Exemplo</h3>
+                        <p class="text-sm text-gray-500 mb-2">Descrição curta do produto.</p>
+                        <p class="text-2xl font-bold brand-red mb-3 mt-auto">R$ 29,90</p>
+                        <button class="w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md transition-colors">
+                            <i class="fas fa-cart-plus mr-2"></i>Comprar
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 flex flex-col">
+                    <img src="https://via.placeholder.com/300x200/cccccc/969696.png?text=Produto+Exemplo+2" alt="Nome do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Outro Produto Fantástico</h3>
+                        <p class="text-sm text-gray-500 mb-2">Mais detalhes interessantes aqui.</p>
+                        <p class="text-xs text-gray-400 line-through">R$ 59,90</p>
+                        <p class="text-2xl font-bold brand-red mb-3 mt-auto">R$ 49,90</p>
+                        <button class="w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md transition-colors">
+                            <i class="fas fa-cart-plus mr-2"></i>Comprar
+                        </button>
+                    </div>
+                </div>
+                 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 flex flex-col">
+                    <img src="https://via.placeholder.com/300x200/cccccc/969696.png?text=Produto+Exemplo+3" alt="Nome do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Produto Essencial do Dia</h3>
+                        <p class="text-sm text-gray-500 mb-2">Este não pode faltar na sua casa.</p>
+                        <p class="text-2xl font-bold brand-red mb-3 mt-auto">R$ 15,50</p>
+                        <button class="w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md transition-colors">
+                            <i class="fas fa-cart-plus mr-2"></i>Comprar
+                        </button>
+                    </div>
+                </div>
+                 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 flex flex-col">
+                    <img src="https://via.placeholder.com/300x200/cccccc/969696.png?text=Produto+Exemplo+4" alt="Nome do Produto" class="w-full h-48 object-cover">
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Lançamento Especial</h3>
+                        <p class="text-sm text-gray-500 mb-2">Confira a novidade que chegou!</p>
+                        <p class="text-2xl font-bold brand-red mb-3 mt-auto">R$ 79,00</p>
+                        <button class="w-full bg-brand-red hover-bg-brand-red-dark text-white font-semibold py-2 px-4 rounded-md transition-colors">
+                            <i class="fas fa-cart-plus mr-2"></i>Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="bg-transparent border-2 border-brand-red brand-red font-semibold px-8 py-3 rounded-lg hover:bg-brand-red hover:text-white transition-colors">
+                    Ver Todas as Ofertas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Nossos Serviços e Conveniências</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-truck text-3xl brand-red mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Entrega Rápida</h3>
+                    <p class="text-gray-600">Receba seus produtos no conforto da sua casa com agilidade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-clinic-medical text-3xl brand-red mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Farmácia Popular</h3>
+                    <p class="text-gray-600">Aqui tem Farmácia Popular. Medicamentos com preços acessíveis.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-headset text-3xl brand-red mb-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Atendimento Especializado</h3>
+                    <p class="text-gray-600">Nossos farmacêuticos estão prontos para te ajudar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4 text-center">
+            <i class="fas fa-heartbeat text-5xl brand-red mb-4"></i>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Cuide da Sua Saúde Conosco</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Acesse nosso blog para dicas de bem-estar, informações sobre medicamentos e muito mais para uma vida mais saudável.</p>
+            <a href="#" class="bg-brand-red hover-bg-brand-red-dark text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all">
+                Ler Dicas de Saúde
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Drogaria Central</h4>
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div class="header-cross !text-white !w-6 !h-6">
+                           <style scoped> .header-cross::before { width: 5px; } .header-cross::after { height: 5px; } </style>
+                        </div>
+                        <span class="text-xl font-bold text-white">Drogaria Central</span>
+                    </div>
+                    <p class="text-sm">Sua saúde, nosso foco. Desde [Ano de Fundação], oferecendo cuidado e confiança.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Sobre Nós</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Nossas Lojas</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Atendimento</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Central de Ajuda</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Políticas de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Termos de Uso</a></li>
+                        <li><a href="mailto:contato@drogariacentral.com.br" class="hover:text-red-400 transition-colors">contato@drogariacentral.com.br</a></li>
+                        <li><span class="font-semibold">(XX) XXXX-XXXX</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3">Siga-nos</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-red-400 transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2 mt-3">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="w-full px-3 py-2 text-sm text-gray-800 rounded-l-md focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none">
+                        <button class="bg-brand-red hover-bg-brand-red-dark text-white px-3 py-2 text-sm rounded-r-md">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> Drogaria Central. Todos os direitos reservados.</p>
+                <p>CNPJ: XX.XXX.XXX/0001-XX | Endereço Matriz: Rua Exemplo, 123, Cidade, Estado</p>
+                <p class="mt-2">Desenvolvido com <i class="fas fa-heart brand-red"></i> como exemplo para demonstração.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors z-40">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+</body>
+</html>
